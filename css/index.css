@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* link 의 코드가 많아지면 복잡하기 때문에 import로 추가해 사용 */
+@import "reset.css";
+
+
+/* header Area */
+header{}
+header h1{}
+header nav{}
