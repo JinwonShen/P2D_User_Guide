@@ -14,24 +14,23 @@
     font-style: normal;
 }
 
-.wrap{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1100px;
-    height: 100%;
-}
 
 
-
-/* header Area */
+/* header Area ---------- */
 header{
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 200px;
-    background-color: aquamarine;
+    background: #fff;
+    z-index: 1000;
 }
-header h1{
+header .inner {
+    width: 1180px;
+    height: 100%;
+    margin: auto;
+}
+header .inner h1{
     font-size: 32px;
     position: absolute;
     top: 50%;
@@ -40,19 +39,20 @@ header h1{
 }
 
 
-/* menu section area */
+
+/* menu section area ---------- */
 section.fixMenu{
     position: fixed;
-    left: 0;
+    left: calc((100% - 1180px) / 2);
     top: 200px;
-    width: 30%;
+    width: calc(1180px * 0.2);
     height: calc(100vh - 200px);
-    background-color: blanchedalmond;
+    background-color: aliceblue;
     z-index: 1000;
 }
 
 section.fixMenu nav{
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 200px;
 }
@@ -61,11 +61,12 @@ section.fixMenu nav{
 
 
 
-/* scroll section area */
+/* scroll section area ---------- */
 section.scrollContents{
     position: absolute;
-    width: 70%;
-    right: 0;
+    top: 200px;
+    width: calc(1180px * 0.8);
+    right: calc((100% - 1180px) / 2);
 }
 
 section.scrollContents div{
@@ -93,4 +94,4 @@ section.scrollContents div{
 
 
 
-/* footer area */
+/* footer area ---------- */
