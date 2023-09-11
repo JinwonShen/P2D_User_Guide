@@ -3,17 +3,53 @@
 /* link 의 코드가 많아지면 복잡하기 때문에 import로 추가해 사용 */
 @import "reset.css";
 
-/* fonts <ex> */
+
+/* EN Font */
 @font-face {
-    font-family: "NotoSans_b";
-    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2');
-    src: url('../fonts/NotoSansKR-Bold.woff') format('woff');
-    src: url('../fonts/NotoSansKR-Bold.ttf') format('truetype');
-    src: url('../fonts/NotoSansKR-Bold.otf') format('Opentype');
+    font-family: "Hankook_B";
+    src:  url('../fonts/HankookTTFBold.eot') format('embedded-opentype');
+    src:  url('../fonts/HankookTTFBold.ttf') format('truetype');
+    src:  url('../fonts/HankookTTFBold.woff') format('woff');
+    src:  url('../fonts/HankookTTFBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hankook_L";
+    src:  url('../fonts/HankookTTFLight.eot') format('embedded-opentype');
+    src:  url('../fonts/HankookTTFLight.ttf') format('truetype');
+    src:  url('../fonts/HankookTTFLight.woff') format('woff');
+    src:  url('../fonts/HankookTTFLight.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hankook_M";
+    src:  url('../fonts/HankookTTFMedium.eot') format('embedded-opentype');
+    src:  url('../fonts/HankookTTFMedium.ttf') format('truetype');
+    src:  url('../fonts/HankookTTFMedium.woff') format('woff');
+    src:  url('../fonts/HankookTTFMedium.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
+/* KR Font Regular*/
+@font-face {
+    font-family: "Hankook_R_KR";
+    src:  url('../fonts/HankookKRTTFRegular.eot') format('embedded-opentype');
+    src:  url('../fonts/HankookKRTTFRegular.ttf') format('truetype');
+    src:  url('../fonts/HankookKRTTFRegular.woff') format('woff');
+    src:  url('../fonts/HankookKRTTFRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}  
+
+
+body {
+    font-family: "Hankook_M", sans-serif, 'Nanum Gothic';
+}
 
 
 /* header Area ---------- */
