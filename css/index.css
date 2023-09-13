@@ -49,6 +49,7 @@
 
 body {
     font-family: "Hankook_M", sans-serif, 'Nanum Gothic';
+    background: #eee;
 }
 
 
@@ -58,22 +59,23 @@ header{
     top: 0;
     width: 100%;
     height: 200px;
-    background: #fff;
+    /* background: #fff; */
     z-index: 1000;
 }
 header .inner {
+    margin: auto;
     width: 100%;
-    max-width: 1180px;
+    max-width: 800px;
     height: 100%;
     margin: auto;
 }
 header .inner h1{
+    position: absolute;
     font-family: "Hankook_B";
     font-size: 32px;
     position: absolute;
     top: 50%;
-    left: 30%;
-    transform: translate(-30%, -50%);
+    transform: translate(0 , -50%);
     color: #222;
 }
 header .inner h1:hover{
@@ -91,19 +93,13 @@ header .inner h1:hover span{
 /* menu section area ---------- */
 section.fixMenu{
     position: fixed;
-    left: calc((100% - 1180px) / 2);
+    left: calc((100% - 800px) / 2);
     top: 200px;
-    width: calc(1180px * 0.2);
+    width: calc(800px * 0.25);
     height: calc(100vh - 200px);
-    background-color: aliceblue;
     z-index: 1000;
 }
 
-section.fixMenu nav{
-    position: absolute;
-    left: 0;
-    top: 200px;
-}
 
 
 
@@ -113,8 +109,8 @@ section.fixMenu nav{
 section.scrollContents{
     position: absolute;
     top: 200px;
-    width: calc(1180px * 0.8);
-    right: calc((100% - 1180px) / 2);
+    width: calc(800px * 0.75);
+    right: calc((100% - 800px) / 2);
 }
 
 section.scrollContents .cont{
@@ -125,25 +121,7 @@ section.scrollContents .cont img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-} 
-
-.cont1{
-    background-color: red;
 }
-.cont2{
-    background-color: orange;
-}
-.cont3{
-    background-color: yellow;
-}
-.cont4{
-    background-color: green;
-}
-.cont5{
-    background-color: blue;
-}
-
-
 
 
 
