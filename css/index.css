@@ -55,7 +55,7 @@ body {
 
 /* header Area ---------- */
 header{
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     height: 200px;
@@ -91,15 +91,19 @@ header .inner h1:hover span{
 
 
 /* menu section area ---------- */
-section.fixMenu{
-    position: fixed;
+section.fixMenu{ /* flex 사용 적극 권장.. 반응형 쉬워짐 */
+    position: absolute;
     left: calc((100% - 800px) / 2);
     top: 200px;
     width: calc(800px * 0.25);
-    height: calc(100vh - 200px);
+    height: 100%;
     z-index: 1000;
 }
 
+section.fixMenu nav{
+    position: sticky;
+    top: 50px;
+}
 
 
 
