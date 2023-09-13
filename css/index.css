@@ -62,18 +62,30 @@ header{
     z-index: 1000;
 }
 header .inner {
-    width: 1180px;
+    width: 100%;
+    max-width: 1180px;
     height: 100%;
     margin: auto;
 }
 header .inner h1{
+    font-family: "Hankook_B";
     font-size: 32px;
     position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-30%, -50%);
+    color: #222;
 }
-
+header .inner h1:hover{
+    color: #999;
+}
+header .inner h1 span{
+    font-family: "Hankook_M";
+    font-size: 18px;
+}
+header .inner h1:hover span{
+    color: #222;
+}
 
 
 /* menu section area ---------- */
@@ -105,9 +117,15 @@ section.scrollContents{
     right: calc((100% - 1180px) / 2);
 }
 
-section.scrollContents div{
+section.scrollContents .cont{
     height: 500px;
 }
+
+section.scrollContents .cont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
 
 .cont1{
     background-color: red;
