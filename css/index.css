@@ -47,9 +47,14 @@
 }  
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: "Hankook_M", sans-serif, 'Nanum Gothic';
-    background: #eee;
+    background: #eee;color: #222;
 }
 
 
@@ -105,7 +110,16 @@ section.fixMenu nav{
     top: 50px;
 }
 
-
+section.fixMenu nav > ul > li{
+    padding-bottom: 10px;
+}
+section.fixMenu nav ul li a{
+    text-decoration: none;
+    color: #222;
+}
+section.fixMenu nav > ul > li > ul > li{
+    padding: 10px;
+}
 
 
 
@@ -119,12 +133,26 @@ section.scrollContents{
 
 section.scrollContents .cont{
     height: 500px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 35px;
 }
-
-section.scrollContents .cont img{
+section.scrollContents .cont p{
+    line-height: 1.5;
+    padding: 10px 25px;
+}
+section.scrollContents .cont .imgBox{
+    width: 450px;
+    height: 300px;
+    margin-left: 25px;
+    margin: 25px 0 0 25px;
+}
+section.scrollContents .cont .imgBox img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 
