@@ -58,13 +58,16 @@ body {
 }
 
 
+/* wrap ---------- */
+.wrap{
+    display: flex;flex-direction: column;
+}
+
+
 /* header Area ---------- */
 header{
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 200px;
-    /* background: #fff; */
     z-index: 1000;
 }
 header .inner {
@@ -72,16 +75,13 @@ header .inner {
     width: 100%;
     max-width: 800px;
     height: 100%;
-    margin: auto;
 }
 header .inner h1{
-    position: absolute;
     font-family: "Hankook_B";
     font-size: 32px;
     position: absolute;
-    top: 50%;
-    transform: translate(0 , -50%);
     color: #222;
+    line-height: 200px;
 }
 header .inner h1:hover{
     color: #999;
@@ -94,61 +94,66 @@ header .inner h1:hover span{
     color: #222;
 }
 
+/* fixMenu, scrollContents 부모 컨텐츠 */
+.contentsWrap{
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
 
 /* menu section area ---------- */
-section.fixMenu{ /* flex 사용 적극 권장.. 반응형 쉬워짐 */
-    position: absolute;
-    left: calc((100% - 800px) / 2);
-    top: 200px;
+.contentsWrap .fixMenu{ /* flex 사용 적극 권장.. 반응형 쉬워짐 */
+    position: sticky;
+    top: 100px;
     width: calc(800px * 0.25);
     height: 100%;
     z-index: 1000;
 }
-
-section.fixMenu nav{
-    position: sticky;
-    top: 50px;
+.contentsWrap .fixMenu ul{
+    display: flex;
+    flex-direction: column;
 }
-
-section.fixMenu nav > ul > li{
-    padding-bottom: 10px;
+.contentsWrap .fixMenu ul li{
+    padding-bottom: 15px;
 }
-section.fixMenu nav ul li a{
+.contentsWrap .fixMenu ul li a{
     text-decoration: none;
     color: #222;
+    padding-bottom: 10px;
 }
-section.fixMenu nav > ul > li > ul > li{
+.contentsWrap .fixMenu ul li a i{
+    margin-left: 50px;
+}
+.contentsWrap .fixMenu > ul > li > ul > li{
     padding: 10px;
 }
 
 
 
 /* scroll section area ---------- */
-section.scrollContents{
-    position: absolute;
-    top: 200px;
+.contentsWrap .scrollContents{
     width: calc(800px * 0.75);
-    right: calc((100% - 800px) / 2);
 }
 
-section.scrollContents .cont{
+.contentsWrap .scrollContents .cont{
     height: 500px;
     width: 500px;
     border: 1px solid #ccc;
     border-radius: 15px;
     margin-bottom: 35px;
 }
-section.scrollContents .cont p{
+.contentsWrap .scrollContents .cont p{
     line-height: 1.5;
     padding: 10px 25px;
 }
-section.scrollContents .cont .imgBox{
+.contentsWrap .scrollContents .cont .imgBox{
     width: 450px;
     height: 300px;
     margin-left: 25px;
     margin: 25px 0 0 25px;
 }
-section.scrollContents .cont .imgBox img{
+.contentsWrap .scrollContents .cont .imgBox img{
     width: 100%;
     height: 100%;
     object-fit: cover;
