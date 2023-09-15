@@ -76,17 +76,17 @@ header .inner {
     max-width: 800px;
     height: 100%;
 }
-header .inner h1{
+header .inner a h1{
     font-family: "Hankook_B";
     font-size: 32px;
     position: absolute;
     color: #222;
     line-height: 200px;
 }
-header .inner h1:hover{
+header .inner a h1:hover{
     color: #999;
 }
-header .inner h1 span{
+header .inner a h1 span{
     font-family: "Hankook_M";
     font-size: 18px;
 }
@@ -96,11 +96,31 @@ header .inner h1:hover span{
 
 /* fixMenu, scrollContents 부모 컨텐츠 */
 .contentsWrap{
+    width: 100%;
     max-width: 800px;
     height: 100%;
     display: flex;
     margin: auto;
 }
+
+@media all and ( max-width : 900px ) and ( min-width : 800px ){
+    header .inner {
+        width: 90%;
+    }
+    .contentsWrap{
+        width: 90%;
+    }
+}
+
+
+@media all and ( max-width : 800px ) and ( min-width : 400px ){
+    .contentsWrap{
+        flex-direction: column;
+    }
+    header .inner a h1{
+    }
+}
+
 
 /* menu section area ---------- */
 .contentsWrap .fixMenu{ /* flex 사용 적극 권장.. 반응형 쉬워짐 */
