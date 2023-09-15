@@ -142,6 +142,7 @@ header .inner h1:hover span{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin-bottom: 35px;
+    float: right;
 }
 .contentsWrap .scrollContents .cont p{
     line-height: 1.5;
